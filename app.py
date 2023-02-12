@@ -1,14 +1,15 @@
 from flask import Flask, request, url_for, redirect, render_template
 import pickle
 import numpy as np
-app = Flask(__name__, template_folder='template',
-             static_folder='staticFiles')
+app = Flask(__name__, template_folder='template')
 model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def hello():
-        return render_template("index.html")
-
+        return render_template("index1.html")
+@app.route('/earthquake', methods=['POST','GET'])
+def earthquake():
+        return render_template('index.html')
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
         int_features = [float(x) for x in request.form.values()]
