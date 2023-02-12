@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starter template</title>
+</head>
+<body>
+    <form action='/pre' method="Post" class="col s12">
+        <div class="row">
+            <div class="input-field col s4">
+                <label for="first_name"><b>LON</b></label>
+                <br>
+                <input id="first_name" name='LON' type="text" placeholder="MMDDYYYY" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <label for="last_name"><b>LAT</b></label>
+                <br>
+                <input id="last_name" name='LAT' type="text"  class="validate">
+            </div>
+            <div class="input-field col s4">
+                <label for="_name"><b>RANGE</b></label>
+                <br>
+                <input id="_name" name='RANGE' type="text" class="validate">
+            </div>
+            <div class="input-field col s4">
+                <label for="name_"><b>AZIMUTH</b></label>
+                <br>
+                <input id="name_" name='AZIMUTH' type="text" class="validate"/>
+            </div>
+           
+        </div>
+        <div class="row_center">
+            <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+        </div>
+    </form>
+    <div>
+        <p>
+            {{pred}}
+        </p>
+    </div>
+</body>
+</html>
