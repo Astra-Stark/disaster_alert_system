@@ -7,11 +7,11 @@ model = pickle.load(open('model.pkl', 'rb'))
 @app.route('/')
 def hello():
         return render_template("index1.html")
-@app.route('/hailstrom', methods=['POST','GET'])
+@app.route('/hailstorm', methods=['POST','GET'])
 def hailstorm():
-        return render_template('hailstrom.html')
+        return render_template('hailstorm.html')
 @app.route('/pre', methods=['POST', 'GET'])
-def predicts():
+def predcts():
         int_features = [float(x) for x in request.form.values()]
         final = [np.array(int_features)]
         prediction = model.predict(final)
