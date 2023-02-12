@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href='/staticFiles/mainh.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'maine.css') }}">
 </head>
 <body>
     <form action='/pre' method="Post" class="col s12">
+        <h1>HAILSTORM PREDICTION INTERFACE</h1> 
         <div class="row">
             <div class="input-field col s4">
-                <label for="first_name"><b>LON</b></label>
+                <label for="first_name"><b>LONGITUDE</b></label>
                 <br>
-                <input id="first_name" name='LON' type="text" placeholder="MMDDYYYY" class="validate">
+                <input id="first_name" name='LON' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="last_name"><b>LAT</b></label>
+                <label for="last_name"><b>LATITUDE</b></label>
                 <br>
                 <input id="last_name" name='LAT' type="text"  class="validate">
             </div>
@@ -34,11 +35,11 @@
            
         </div>
         <div class="row_center">
-            <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+            <button type="submit" class="btn-large">Predict</button>
         </div>
     </form>
     <div>
-        <p>
+        <p class="pp">
             {{pred}}
         </p>
     </div>

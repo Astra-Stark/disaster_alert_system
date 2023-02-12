@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'main.css') }}">
+
+</head>
+<body>
+    <h1>>NATURAL DISASTER PREDICTION SYSTEM</h1>
+    <div class="ttpp" >
+        <div class = "btn">
+        <form action='/earthquake' method="Post" class="col s12">
+                <div class = "container">
+                <div class="div-1">
+                <button type="submit">earthquake</button>
+                </div>
+            </div>
+        </form>
+        <form action='/flood'method="Post" class="col s12">
+            <div class="container">
+                <div class="div-2">
+                <button type="submit">flood</button>
+                </div>
+            </div>
+        </form>
+        <form action='/hailstorm' method="Post" class="col s12">
+            <div class = "container">
+                <div class="div-3">
+                <button type="submit">hailstorm</button>
+                </div>
+            </div>
+        </form>
+        </div>
+        <div>
+            <p>
+                {{pred}}
+            </p>
+        </div>
+        </div>
+</body>
+</html>

@@ -6,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href='/staticFiles/main.css' />
+    <!-- <link rel="stylesheet" href='/static/main.css' /> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'main.css') }}">
 </head>
 <body>
+    <h1>>NATURAL DISASTER PREDICTION SYSTEM</h1>
+    <header>NATURAL DISASTER PREDICTION SYSTEM</header>
+    <div class="ttpp">
     <div class = "btn">
     <form action='/earthquake' method="Post" class="col s12">
-            <div class = "container1">
+            <div class = "container">
+            <div class="div-1">
             <button type="submit">earthquake</button>
+            </div>
         </div>
     </form>
     <form action='/flood'method="Post" class="col s12">
-        <div class="container2">
+        <div class="container">
+            <div class="div-2">
             <button type="submit">flood</button>
+            </div>
         </div>
     </form>
     <form action='/hailstorm' method="Post" class="col s12">
-        <div class = "container3">
+        <div class = "container">
+            <div class="div-3">
             <button type="submit">hailstorm</button>
+            </div>
         </div>
     </form>
     </div>
@@ -30,6 +40,7 @@
         <p>
             {{pred}}
         </p>
+    </div>
     </div>
 </body>
 </html>

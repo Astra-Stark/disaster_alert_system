@@ -1,0 +1,33 @@
+*{
+    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    background-color: rgb(107, 212, 247); 
+    height: 50px;
+    width: 175px;
+   }
+.btn-large{
+    margin-left: 500px;
+    margin-top: 250px;
+}
+p{
+    margin-left: 510px;
+    font-weight: bold;
+    font-size: 2rem;
+}
+h1{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.month{
+    margin-left: 20px;
+    text-align: center;
+    width: 100vw;
+}
+.row{
+    text-align: center;
+}

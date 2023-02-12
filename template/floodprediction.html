@@ -6,84 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter template</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href='/staticFiles/mainf.css' />
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'maine.css') }}">
 </head>
 <body>
     <form action='/predicts' method="Post" class="col s12">
         <h1>FLOOD PREDICTION INTERFACE</h1>
         <div class="row">
             <div class="input-field col s4">
-                <label for="jan"><b>Jan</b></label>
+                <label for="jan" class="month"><b>Jan</b></label>
                 <br>
                 <input id="jan" name='Jan' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="feb"><b>Feb</b></label>
+                <label for="feb" class="month"><b>Feb</b></label>
                 <br>
                 <input id="feb" name='Feb' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="march"><b>March</b></label>
+                <label for="march" class="month"><b>March</b></label>
                 <br>
                 <input id="march" name='March' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="april"><b>April</b></label>
+                <label for="april" class="month"><b>April</b></label>
                 <br>
                 <input id="april" name='April' type="text" class="validate"/>
             </div>
             <div class="input-field col s4">
-                <label for="may"><b>May</b></label>
+                <label for="may" class="month"><b>May</b></label>
                 <br>
                 <input id="may" name='May' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="june"><b>June</b></label>
+                <label for="june" class="month"><b>June</b></label>
                 <br>
                 <input id="june" name='June' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="july"><b>July</b></label>
+                <label for="july" class="month"><b>July</b></label>
                 <br>
                 <input id="july" name='July' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="august"><b>August</b></label>
+                <label for="august" class="month"><b>August</b></label>
                 <br>
                 <input id="august" name='August' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="september"><b>September</b></label>
+                <label for="september" class="month"><b>September</b></label>
                 <br>
                 <input id="september" name='September' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="october"><b>October</b></label>
+                <label for="october" class="month"><b>October</b></label>
                 <br>
                 <input id="october" name='October' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="november"><b>November</b></label>
+                <label for="november" class="month"><b>November</b></label>
                 <br>
                 <input id="november" name='November' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="december"><b>December</b></label>
+                <label for="december" class="month"><b>December</b></label>
                 <br>
                 <input id="december" name='December' type="text" class="validate">
             </div>
             <div class="input-field col s4">
-                <label for="annual rainfall"><b>Annual Rainfall</b></label>
+                <label for="annual rainfall" class="month"><b>Annual Rainfall</b></label>
                 <br>
                 <input id="annual rainfall" name='Annual Rainfall' type="text" class="validate">
             </div>
         </div>
         <div class="row_center">
-            <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+            <button type="submit" class="btn-large1" >Predict</button>
         </div>
     </form>
     <div>
-        <p>
+        <p class="ppc">
             {{pred}}
         </p>
     </div>
