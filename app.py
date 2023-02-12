@@ -12,7 +12,7 @@ def hailstorm():
         return render_template('hailstorm.html')
 @app.route('/pre', methods=['POST', 'GET'])
 def predct():
-        model = pickle.load(open('model2.pkl', 'rb'))
+        model = pickle.load(open('model1.pkl', 'rb'))
         int_features = [float(x) for x in request.form.values()]
         final = [np.array(int_features)]
         prediction = model.predict(final)
@@ -24,9 +24,9 @@ def predct():
 @app.route('/flood', methods=['POST','GET'])
 def floods():
         return render_template('floodprediction.html')
-
 @app.route('/predicts', methods=['POST', 'GET'])
 def predicts():
+        model = pickle.load(open('model2.pkl', 'rb'))
         int_features = [float(x) for x in request.form.values()]
         final = [np.array(int_features)]
         prediction = model.predict(final)
