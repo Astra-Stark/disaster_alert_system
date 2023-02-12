@@ -5,23 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Starter template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href='/staticFiles/main.css' />
 </head>
 <body>
+    <div class = "btn">
     <form action='/earthquake' method="Post" class="col s12">
-        <div>
+            <div class = "container1">
             <button type="submit">earthquake</button>
         </div>
     </form>
     <form action='/flood'method="Post" class="col s12">
-        <div>
+        <div class="container2">
             <button type="submit">flood</button>
         </div>
     </form>
     <form action='/hailstorm' method="Post" class="col s12">
-        <div>
+        <div class = "container3">
             <button type="submit">hailstorm</button>
         </div>
     </form>
+    </div>
     <div>
         <p>
             {{pred}}
