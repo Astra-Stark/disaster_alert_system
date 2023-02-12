@@ -11,19 +11,20 @@ def hello():
 def hailstorm():
         return render_template('hailstorm.html')
 @app.route('/pre', methods=['POST', 'GET'])
-def predcts():
-        model = pickle.load(open('model.pkl', 'rb'))
+def predct():
+        model = pickle.load(open('model2.pkl', 'rb'))
         int_features = [float(x) for x in request.form.values()]
         final = [np.array(int_features)]
-        prediction = model1.predict(final)
-        if prediction <= 10:
+        prediction = model.predict(final)
+        if prediction >= 10:
             return render_template('hailstorm.html', pred='Risky')
         else:
-            return render_template('hailstorm.html', pred='safe')
-        
+            return render_template('hailstorm.html', pred="Safe")
+
 @app.route('/flood', methods=['POST','GET'])
 def floods():
         return render_template('floodprediction.html')
+
 @app.route('/predicts', methods=['POST', 'GET'])
 def predicts():
         int_features = [float(x) for x in request.form.values()]
@@ -38,6 +39,7 @@ def earthquake():
         return render_template('index.html')
 @app.route('/predict', methods=['POST', 'GET'])
 def predict():
+        model = pickle.load(open('model.pkl', 'rb'))
         int_features = [float(x) for x in request.form.values()]
         final = [np.array(int_features)]
         prediction = model.predict(final)
